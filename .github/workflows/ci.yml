@@ -1,6 +1,6 @@
 name: Lab CI
 
-# Тригери: запускати при push або pull request в гілку main
+# Тригери: запускати при push, pull request в гілку main, АБО вручну
 on:
   push:
     branches:
@@ -8,6 +8,8 @@ on:
   pull_request:
     branches:
       - main
+
+  workflow_dispatch: 
 
 jobs:
   build:
