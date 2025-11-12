@@ -10,10 +10,10 @@ test('Перевірка заголовка сторінки About', async ({ pa
 
 // Тест 2: Перевірка навігації (посилання "Повернутися на головну")
 test('Перевірка посилання "Повернутися на головну"', async ({ page }) => {
-  await page.goto('/about.html');
+  await page.goto('/abot.html');
   
   // Клікаємо на посилання
-  await page.click('text=Повернутися на головну');
+  await page.click('');
   
   // Очікуємо, що URL зміниться на головну сторінку
   // `baseURL` (http://localhost:3000) + /
