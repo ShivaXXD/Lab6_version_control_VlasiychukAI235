@@ -4,9 +4,12 @@ on:
   push:
     branches:
       - main
+      
   pull_request:
     branches:
       - main
+      
+  workflow_dispatch:
 
 jobs:
   build:
@@ -24,11 +27,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    # --- ОЦЕ РІШЕННЯ ---
-    # Додаємо крок для завантаження браузерів та їх системних залежностей
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    # ------------------
 
     - name: Run tests
       run: npm test
